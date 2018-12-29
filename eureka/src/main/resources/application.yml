@@ -1,0 +1,42 @@
+#spring:
+#  application:
+#    name: eureka-server
+##  profiles:
+##    active: dev
+##    active: pro
+#---
+#server:
+#  port: 8761
+#spring:
+#  profiles: dev
+#
+#eureka:
+#  instance:
+#    hostname: peer1
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8762/eureka
+##    #    注册开关
+##    registerWithEureka: false
+##    #    检索服务
+##    fetchRegistry: false
+#  server:
+#    waitTimeInMsWhenSyncEmpty: 0
+#---
+#server:
+#  port: 8762
+#spring:
+#  profiles: pro
+#
+#eureka:
+#  instance:
+#    hostname: peer2
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka
+##    #    注册开关
+##    registerWithEureka: false
+##    #    检索服务
+##    fetchRegistry: false
+#  server:
+#    waitTimeInMsWhenSyncEmpty: 0
