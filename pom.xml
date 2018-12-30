@@ -46,6 +46,10 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
         <!-- jaxb模块引用 - start -->
         <dependency>
             <groupId>javax.xml.bind</groupId>
@@ -70,6 +74,10 @@
     </dependencies>
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
             <!--<plugin>-->
             <!--<artifactId>kotlin-maven-plugin</artifactId>-->
             <!--<groupId>org.jetbrains.kotlin</groupId>-->
