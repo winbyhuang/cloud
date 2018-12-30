@@ -9,7 +9,7 @@ server:
 eureka:
   instance:
     prefer-ip-address: true
-    instance-id: ${spring.cloud.client.ip-address}:${server.port}:'@project.version@'
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
 #    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
 #    hostname: peer1
   client:
@@ -23,5 +23,11 @@ eureka:
     waitTimeInMsWhenSyncEmpty: 0
 info:
   app:
-    version: @project.version@'
-    build-date: '@maven.build.timestamp@'
+    version: 1.0
+    build-date:
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

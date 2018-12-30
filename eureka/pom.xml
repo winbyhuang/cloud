@@ -32,13 +32,13 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>aac</finalName>
+        <finalName>eureka</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com</mainClass>
+                    <mainClass>com.winby.cloud.EurekaApplication</mainClass>
                     <includeSystemScope>true</includeSystemScope>
                 </configuration>
                 <executions>
