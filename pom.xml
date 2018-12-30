@@ -13,7 +13,7 @@
         <!--<module>hystrix</module>-->
         <!--<module>feign</module>-->
         <!--<module>zuul</module>-->
-        <!--<module>config</module>-->
+        <module>config</module>
         <!--<module>hbase</module>-->
     </modules>
 

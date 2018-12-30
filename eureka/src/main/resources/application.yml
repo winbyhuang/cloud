@@ -1,4 +1,10 @@
+
+
 spring:
+  security:
+    user:
+      name: admin
+      password: admin
   application:
     name: eureka-server
   profiles:
