@@ -4,4 +4,4 @@ spring:
   application:
     name: common
 
-myww=myww version 2
+myww: myww version 2

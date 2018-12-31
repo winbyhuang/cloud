@@ -8,7 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/winbyhuang/cloud.git
+          uri: https://github.com/winbyhuang/cloud
           search-paths: /configFiles/**
       label: master
 

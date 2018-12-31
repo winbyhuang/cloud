@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author Winby
@@ -14,10 +15,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @since v1.0.0
  */
 @SpringBootApplication
+@RestController
 public class CommonApplication {
     @Value("cloud.eureka.peer.port")
     String value;
-    @Value("myww")
+    @Value("${myww}")
     String my;
 
     @Autowired
