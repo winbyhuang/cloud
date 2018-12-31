@@ -3,3 +3,5 @@ server:
 spring:
   application:
     name: common
+
+myww=myww version 2
