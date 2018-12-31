@@ -8,7 +8,7 @@ spring:
   application:
     name: eureka-server
   profiles:
-    include: peer1
+    include: peer2
 
 server:
   port: ${cloud.eureka.peer.port}
