@@ -2,8 +2,9 @@ spring:
   cloud:
     config:
       label: master
-      discovery:
-        enabled: true
-        service-id: eureka-server
-      profile: main
+#      discovery:
+#        enabled: true
+#        service-id: eureka-server
       uri: http://localhost:8888/
+      name: eureka-server
+      profile: main,peer2

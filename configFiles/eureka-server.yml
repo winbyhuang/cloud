@@ -11,7 +11,7 @@ spring:
     include: peer2
 
 server:
-  port: ${cloud.eureka.peer.port}
+  port: 8999
 eureka:
   instance:
     hostname: ${spring.cloud.client.ip-address}
