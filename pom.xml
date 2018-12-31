@@ -8,12 +8,14 @@
 
     <modules>
         <module>common</module>
-        <module>eureka</module>
+        <module>eureka-server</module>
+        <module>eureka-client</module>
         <!--<module>ribbon</module>-->
         <!--<module>hystrix</module>-->
         <!--<module>feign</module>-->
         <!--<module>zuul</module>-->
-        <module>config</module>
+        <module>config-server</module>
+        <module>config-client</module>
         <!--<module>hbase</module>-->
     </modules>
 

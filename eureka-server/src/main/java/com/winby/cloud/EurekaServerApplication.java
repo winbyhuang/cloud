@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableEurekaServer
 @RestController
 @RefreshScope
-public class EurekaApplication {
+public class EurekaServerApplication {
     @Value("cloud.eureka.peer.port")
     String value;
 
@@ -32,7 +32,7 @@ public class EurekaApplication {
         return environment.getProperty("cloud.eureka.peer.name");
     }
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(EurekaApplication.class, args);
+        SpringApplication.run(EurekaServerApplication.class, args);
     }
 
 }

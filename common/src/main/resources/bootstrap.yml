@@ -6,5 +6,5 @@ spring:
 #        enabled: true
 #        service-id: eureka-server
       uri: http://localhost:8888/
-      name: eureka-server
+      name: common
       profile: main,peer2

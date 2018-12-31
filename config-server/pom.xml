@@ -6,29 +6,38 @@
         <artifactId>parent</artifactId>
         <version>1.0</version>
     </parent>
-    <artifactId>eureka</artifactId>
+    <artifactId>config-server</artifactId>
     <packaging>jar</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <start-class>com.winby.cloud.EurekaApplication</start-class>
+        <start-class>com.winby.cloud.ConfigApplication</start-class>
         <java.version>11</java.version>
         <docker.image.prefix>springcloud</docker.image.prefix>
     </properties>
 
     <dependencies>
+        <!--<dependency>-->
+            <!--<groupId>com.winby.cloud</groupId>-->
+            <!--<artifactId>eureka-client</artifactId>-->
+            <!--<version>1.0</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-config-monitor</artifactId>-->
+        <!--</dependency>-->
         <!--<dependency>-->
             <!--<groupId>org.springframework.boot</groupId>-->
             <!--<artifactId>spring-boot-starter-security</artifactId>-->
         <!--</dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -36,13 +45,13 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>eureka</finalName>
+        <finalName>config</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.winby.cloud.EurekaApplication</mainClass>
+                    <mainClass>com.winby.cloud.ConfigApplication</mainClass>
                     <includeSystemScope>true</includeSystemScope>
                 </configuration>
                 <executions>

@@ -1,9 +1,5 @@
 
 spring:
-#  security:
-#    user:
-#      name: admin
-#      password: admin
   application:
     name: config-server
   profiles:
