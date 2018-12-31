@@ -1,0 +1,46 @@
+spring:
+  cloud:
+    config:
+      label: master
+      discovery:
+        enabled: true
+        service-id: configServer
+      profile: peer1
+      uri: http://localhost:8888/
+  #  security:
+  #    user:
+  #      name: admin
+  #      password: admin
+  application:
+    name: eureka-server
+  profiles:
+    include: peer2
+
+server:
+  port: ${cloud.eureka.peer.port}
+eureka:
+  instance:
+    hostname: ${spring.cloud.client.ip-address}
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  #    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+  #    hostname: peer1
+  client:
+    serviceUrl:
+      defaultZone: ${cloud.eureka.peer.zone}
+  #    #    注册开关
+  #      registerWithEureka: false
+  #    #    检索服务
+  #      fetchRegistry: false
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+info:
+  app:
+    version: 1.0
+    build-date:
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
