@@ -7,11 +7,11 @@ spring:
 #      password: admin
   application:
     name: eureka-server
-  profiles:
-    include: peer2
+#  profiles:
+#    include: peer2
 
 server:
-  port: 8999
+  port: ${cloud.eureka.peer.port}
 eureka:
   instance:
     hostname: ${spring.cloud.client.ip-address}
