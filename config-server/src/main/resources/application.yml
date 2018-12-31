@@ -4,13 +4,13 @@ spring:
     name: config-server
   profiles:
     include: peer1
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/winbyhuang/cloud
-          search-paths: /configFiles/**
-      label: master
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/winbyhuang/cloud
+#          search-paths: /configFiles/**
+#      label: master
 
 
 server:

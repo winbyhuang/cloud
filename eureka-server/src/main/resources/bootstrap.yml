@@ -1,10 +1,15 @@
-#spring:
-#  cloud:
-#    config:
-#      label: master
-##      discovery:
-##        enabled: true
-##        service-id: eureka-server
-#      uri: http://localhost:8888/
-#      name: eureka-server
-#      profile: main,peer2
+spring:
+  application:
+    name: common
+  cloud:
+    config:
+      label: master
+      #      discovery:
+      #        enabled: true
+      #        service-id: eureka-server
+      uri: http://localhost:8888/
+      name: eureka-server
+      profile: dev,peer1
+#      discovery:
+#        enabled: true
+#        service-id: common
