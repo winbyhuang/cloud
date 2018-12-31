@@ -1,35 +1,32 @@
 
 spring:
-  security:
-    user:
-      name: admin
-      password: admin
+#  security:
+#    user:
+#      name: admin
+#      password: admin
   application:
     name: config-server
   profiles:
     include: peer1
   cloud:
     config:
-      label: master
-      username: 
-      password:
       server:
         git:
           uri: https://github.com/winbyhuang/cloud.git
           search-paths: /configFiles/**
+      label: master
 
 
 server:
   port: ${cloud.config.peer.port}
-#eureka:
-#  instance:
-#    prefer-ip-address: true
-#    instance-id: ${spring.cloud.client.ip-address}:${server.port}
-#  client:
-#    serviceUrl:
-#      defaultZone: ${cloud.config.peer.zone}
-#  server:
-#    waitTimeInMsWhenSyncEmpty: 0
+eureka:
+  instance:
+    hostname: ${spring.cloud.client.ip-address}
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: ${cloud.config.peer.zone}
 
 info:
   app:

@@ -1,10 +1,10 @@
 
 
 spring:
-#  security:
-#    user:
-#      name: admin
-#      password: admin
+  security:
+    user:
+      name: admin
+      password: admin
   application:
     name: eureka-server
   profiles:
@@ -14,6 +14,7 @@ server:
   port: ${cloud.eureka.peer.port}
 eureka:
   instance:
+    hostname: ${spring.cloud.client.ip-address}
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
 #    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
