@@ -10,6 +10,7 @@
         <module>common</module>
         <module>eureka-server</module>
         <module>eureka-client</module>
+        <module>gateway-server</module>
         <!--<module>ribbon</module>-->
         <!--<module>hystrix</module>-->
         <!--<module>feign</module>-->
@@ -18,6 +19,7 @@
         <module>config-client</module>
         <module>bus</module>
         <!--<module>hbase</module>-->
+        <!--<module></module>-->
     </modules>
 
     <dependencyManagement>
